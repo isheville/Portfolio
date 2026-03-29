@@ -125,17 +125,38 @@ font-family: 'Nise Sega Sports', sans-serif;
 
 .tagline-pixel {
     font-family: 'vcr', sans-serif;
-    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    font-size: clamp(0.6rem, 1.8vw, 1.1rem);
     color: #00ff00;
     text-transform: uppercase;
     letter-spacing: 4px;
-    animation: taglinePulse 4s infinite ease-in-out;
     background: rgba(0, 0, 0, 0.4);
-    padding: 8px 20px;
+    padding: 8px 12px;
     border-left: 4px solid #00ff00;
     border-right: 4px solid #00ff00;
     display: inline-block;
     margin-bottom: 2rem;
+    white-space: nowrap;
+    position: relative;
+    animation: taglineGlitch 3s infinite;
+}
+
+@keyframes taglineGlitch {
+    0%, 90%, 100% { 
+        transform: translate(0); 
+        text-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
+    }
+    91% { 
+        transform: translate(-2px, 1px); 
+        text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
+    }
+    92% { 
+        transform: translate(2px, -1px); 
+        text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff;
+    }
+    93% { 
+        transform: translate(0); 
+        text-shadow: 0 0 15px #00ff00;
+    }
 }
 
 #muteBtn {
