@@ -73,7 +73,6 @@
     color: #fff;
 }
 
-/* The Animation */
 @keyframes letterGlow {
     0%, 100% { 
         text-shadow: 0 0 5px rgba(255,255,255,0.2);
@@ -109,6 +108,34 @@ font-family: 'Nise Sega Sports', sans-serif;
         0 0 10px #ffffff;
     letter-spacing: 4px;
     animation: arcadeFlicker 3s infinite;
+}
+
+@keyframes taglinePulse {
+    0%, 100% { 
+        opacity: 1; 
+        text-shadow: 0 0 8px rgba(0, 255, 0, 0.6), 2px 2px 0px #000;
+        transform: scale(1);
+    }
+    50% { 
+        opacity: 0.7; 
+        text-shadow: 0 0 25px rgba(0, 255, 0, 0.9), 2px 2px 0px #000;
+        transform: scale(0.98);
+    }
+}
+
+.tagline-pixel {
+    font-family: 'vcr', sans-serif;
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    color: #00ff00;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: taglinePulse 4s infinite ease-in-out;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 8px 20px;
+    border-left: 4px solid #00ff00;
+    border-right: 4px solid #00ff00;
+    display: inline-block;
+    margin-bottom: 2rem;
 }
 
 #muteBtn {

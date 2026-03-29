@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     document.addEventListener("click", startMusic);
 
-    // 2. Mute Toggle Logic
     muteBtn.addEventListener("click", function (e) {
         e.stopPropagation();
         isMuted = !isMuted;
