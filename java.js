@@ -107,8 +107,14 @@ function showMenu() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
     `;
+    setTimeout(() => {
+        const menuContainer = document.querySelector('.arcade-menu-container');
+        if (menuContainer) {
+            menuContainer.style.setProperty('--theme-color', colors.back);
+        }
+    }, 0);
 }
 
 function showSection(section, themeColor) {
@@ -128,6 +134,8 @@ function showSection(section, themeColor) {
     
     panel.style.borderColor = themeColor;
     panel.style.color = themeColor;
+
+    document.querySelector('.arcade-menu-container').style.setProperty('--theme-color', themeColor);
 
     const modalContent = document.querySelector('.modal-content-neon');
     const modalCloseBtn = document.querySelector('.modal-close');

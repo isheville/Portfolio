@@ -549,13 +549,19 @@ a.neon-box:hover {
     .arcade-menu-container {
         background: rgba(0, 0, 0, 0.9);
         padding: 15px;
-        border-top: 2px solid #ff8800;
+        border-top: 2px solid var(--theme-color, #ff8800);
+        box-shadow: 0 -5px 15px var(--theme-color, rgba(255, 136, 0, 0.3));
         margin-top: 20px;
         position: sticky;
         bottom: 0;
         z-index: 100;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
-    .arcade-btn.nav-item { flex: 1 1 30%; font-size: 0.6rem; padding: 12px 5px; }
+    .arcade-btn.nav-item { 
+        flex: 1 1 30%; 
+        font-size: 0.6rem; 
+        padding: 12px 5px; 
+    }
 }
 
 @media (min-width: 992px) {
