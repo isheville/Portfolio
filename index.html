@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>My fuckin ass portfolio</title>
+        <title>mrkrynmrtnz</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link href="css.css" rel="stylesheet">
@@ -11,18 +11,48 @@
 
         <div class="position-fixed top-0 start-0 w-100 h-100 overflow-hidden" style="z-index:-1;">
             <video autoplay muted loop playsinline class="w-100 h-100 object-fit-cover position-absolute top-50 start-50 translate-middle">
-                <source src="vid/glitch slow.mp4" type="video/mp4"/>
+                <source src="vid/arcade.mp4" type="video/mp4"/>
             </video>
         </div>
 
         <div class="container min-vh-100 d-flex flex-column justify-content-center align-items-center px-3 py-5">
             <div class="text-wrapper text-center w-100" id="mainContent">
                 <h3 id="gimdiv" class="mb-2 text-uppercase">GAME DEVELOPER</h3>
-                <h1 id="nim" class="mb-4">mark ryan<br>martinez</h1>
+                <h1 id="nim" class="mb-4 position-relative">
+                    <div id="nim"></div> 
+                    <span class="keep-together neon-letter-wrapper">
+                        <span>m</span><span>a</span><span>r</span><span>k</span> 
+                        <span>r</span><span>y</span><span>a</span><span>n</span>
+                    </span>
+                    <br>
+                    <span class="keep-together neon-letter-wrapper">
+                        <span>m</span><span>a</span><span>r</span><span>t</span><span>i</span><span>n</span><span>e</span><span>z</span>
+                    </span>
+                </h1>
                 <button class="pixel-button text-nowrap px-4 py-2" id="startBtn">PRESS START</button>
             </div>
         </div>
 
+        <div id="profileModal" onclick="closeProfileModal()">
+            <div class="modal-content-neon" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeProfileModal()">X</button>
+                <img id="modalImage" src="img/mypic.jpg" alt="Enlarged View">
+            </div>
+        </div>
+        
+        <audio id="bgMusic" src="audio/8bitmusic.mp3" loop preload="auto"></audio>
+        <button id="muteBtn" style="position: fixed; top: 20px; right: 20px; z-index: 9999; background: rgba(0,0,0,0.7); border: 2px solid #00ff00; color: #fff; font-family: 'vcr', sans-serif; cursor: pointer; padding: 5px 10px;">MUSIC: ON</button>
+        <audio id="startSound" src="audio/pressstart.mp3" preload="auto"></audio>
+        <audio id="gameOverSound" src="audio/gameover.mp3" preload="auto"></audio>
+        <audio id="sfx1" src="audio/arcadeclick.mp3" preload="auto"></audio>
+        <audio id="sfx2" src="audio/arcadeclick2.mp3" preload="auto"></audio>
+        <audio id="sfx3" src="audio/arcadeclick3.mp3" preload="auto"></audio>
+        <audio id="sfx4" src="audio/arcadeclick4.mp3" preload="auto"></audio>
+        <audio id="sfx5" src="audio/arcadeclick5.mp3" preload="auto"></audio>
+        <audio id="sfx6" src="audio/arcadeclick6.mp3" preload="auto"></audio>
+        <audio id="easteregg" src="audio/jumpscare.mp3" preload="auto"></audio>
+        <audio id="easteregg2" src="audio/jumpscare2.mp3" preload="auto"></audio>
+        <audio id="easteregg3" src="audio/jumpscare3.mp3" preload="auto"></audio>
     </body>
 </html>
 
