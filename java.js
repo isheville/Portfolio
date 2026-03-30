@@ -149,10 +149,26 @@ function showSection(section, themeColor) {
         techSlideIndex = 0;
         renderTechSlide(themeColor);
 
-        techInterval = setInterval(() => {
-            techSlideIndex = (techSlideIndex + 1) % 4;
-            renderTechSlide(themeColor);
-        }, 3000);
+        const startTechInterval = () => {
+            if (techInterval) clearInterval(techInterval);
+            techInterval = setInterval(() => {
+                techSlideIndex = (techSlideIndex + 1) % 4;
+                renderTechSlide(themeColor);
+            }, 3000);
+        };
+
+        startTechInterval();
+
+        panel.onmouseenter = () => {
+            if (techInterval) clearInterval(techInterval);
+            const dots = panel.querySelectorAll('.dot');
+            dots.forEach(dot => dot.style.animationPlayState = 'paused');
+        };
+
+        panel.onmouseleave = () => {
+            startTechInterval();
+        };
+        
         return;
     }
 
