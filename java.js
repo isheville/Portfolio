@@ -175,10 +175,25 @@ function showSection(section, themeColor) {
     if (section === "orgs") {
         orgSlideIndex = 0;
         renderOrgLoop(themeColor);
-        orgInterval = setInterval(() => {
-            orgSlideIndex = (orgSlideIndex + 1) % 2;
-            renderOrgLoop(themeColor);
-        }, 3000);
+
+        const startOrgInterval = () => {
+            if (orgInterval) clearInterval(orgInterval);
+            orgInterval = setInterval(() => {
+                orgSlideIndex = (orgSlideIndex + 1) % 2;
+                renderOrgLoop(themeColor);
+            }, 3000);
+        };
+
+        startOrgInterval();
+
+        panel.onmouseenter = () => {
+            if (orgInterval) clearInterval(orgInterval);
+        };
+
+        panel.onmouseleave = () => {
+            startOrgInterval();
+        };
+        
         return;
     }
 
