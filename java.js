@@ -453,7 +453,7 @@ document.addEventListener("click", function (e) {
         }
 
         const chance = Math.random(); 
-        const spawnRate = 0.01;
+        const spawnRate = 0.001;
 
         if (chance < spawnRate) {
             const surpriseImages = [
