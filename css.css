@@ -159,6 +159,13 @@ font-family: 'Nise Sega Sports', sans-serif;
     }
 }
 
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    pointer-events: none;
+}
+
 #muteBtn {
     font-family: 'Press Start 2P', cursive;
     font-size: 0.6rem;
